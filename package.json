@@ -1,0 +1,31 @@
+{
+  "name": "the-jolly-green-giant",
+  "version": "1.0.0",
+  "description": "The Green Giant delivery app.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Limelight-Management-Group/the-jolly-green-giant.git"
+  },
+  "keywords": [
+    "infused",
+    "jolly-green-giant",
+    "delivery",
+    "california",
+    "zeitgiest"
+  ],
+  "author": "Wayne Banks",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Limelight-Management-Group/the-jolly-green-giant/issues"
+  },
+  "homepage": "https://github.com/Limelight-Management-Group/the-jolly-green-giant#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "ejs": "^2.5.6",
+    "express": "^4.15.3"
+  }
+}
