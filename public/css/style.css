@@ -15,3 +15,9 @@
 	/*font-family: 'Luckiest Guy', cursive;*/
 font-family: 'Audiowide', cursive;
 }
+
+#output{
+	clear: both;
+	border:1px solid black;
+	padding: 30px 30px 30px 30px;
+}
