@@ -84,15 +84,19 @@ $(document).ready(function(){
 		let total = 0;
         $.each(shopCart,function(index, value){
 			let subTotal = (value.price * value.qty)
-        	holderHTML +=  `<div> Item: ${value.name}  Qty: ${value.qty}  Price: ${value.price} Id: ${value.id} </div>  <br>`
+        	holderHTML +=  `<div> Item: ${value.name}  Qty: ${value.qty}  Price: ${formatMoney(value.price)} Id: ${value.id} </div>  <br>`
         	// console.log('this is the value :', value)
         	total += subTotal
 
-        	console.log(subTotal, total)
+        	// console.log(subTotal, total)
         })
-        holderHTML += '<div> Total: ' + total + '</div>'
+        holderHTML += '<div> Total: ' + formatMoney(total) + '</div>'
         $('#output').html(holderHTML)
-        console.log('holder Array ', holderHTML)
+        // console.log('holder Array ', holderHTML)
+
+        function formatMoney(n){
+        	return'$' + (n/100).toFixed(2)
+        }
 	}
 	
 
