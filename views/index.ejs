@@ -8,6 +8,14 @@
   <% include ./header/_nav %>
 
 <h1 id='greenDoorHeading'>Welcome to the Jolly Green Giant!</h1>
+<div id="checkoutDiv">
+	<div>Subtotal <span class="total"> </span> <span class="items"></span> items in cart </div> 
+	<div>
+	
+	<span class="btn btn-success" data-toggle='modal' data-target="#cart">Open Shopping Cart</span>
+	<a href="/checkout" class="btn btn-primary">Proceed to Checkout</a>
+	</div>
+</div>
 <div class="row">
 <div class="item col-md-3"><h3>Moon Pie</h3><img class="img-fluid" src="http://placehold.it/350x150"><div>Product Information <a href="#" data-name="moonPie" data-price="1000" data-id="1" class="productItem">Add to Cart</a></div></div>
 
@@ -29,7 +37,32 @@
 <div class="item col-md-3"><h3>The Green Giant</h3><img class="img-fluid" src="http://placehold.it/350x150"><div>Product Information <a href="#" data-name="theGreenGiant" data-price="1000" data-id="7" class="productItem">Add to Cart</a></div></div>
 
 <div class="item col-md-3"><h3>Milk and Cookies</h3><img class="img-fluid" src="http://placehold.it/350x150"><div>Product Information <a href="#" data-name="milkAndCooks" data-price="1000" data-id="8" class="productItem">Add to Cart</a></div></div>
-<div id="output"></div>
+<!-- <div id="output"></div> -->
+<!-- Modals -->
+<div class="modal fade" id="cart" tabindex="-1">
+	
+	<div class=" modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header"><button type="button" class="close" data-dismiss="modal">&times;</button><h4 class="modal-title">Shopping Cart</h4></div>
+			<div class="modal-body">
+				<table class="table table-hover">
+					<thead class="thead-inverse">
+						<tr>
+							<th>Qty</th>
+							<th>Item Name</th>
+							<th>Cost</th>
+							<th class="text-xs-right">Subtotal</th>
+						</tr>
+					</thead>
+					<tbody id="output">
+						
+					</tbody>
+				</table>
+			</div>
+			<div class="modal-footer"><a href="/checkout" class="btn btn-primary">Proceed to Checkout</a></div>			
+		</div>
+	</div>
+</div>
 </div>
 </body>
 </html>

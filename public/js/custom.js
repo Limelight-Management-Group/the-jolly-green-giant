@@ -79,19 +79,26 @@ $(document).ready(function(){
 		if(sessionStorage["shopCart"] != null){
 		 shopCart = JSON.parse(sessionStorage["shopCart"].toString())
 		 console.log('this is sessionStorage :', sessionStorage["shopCart"])
+		 $('#checkoutDiv').show()
 		}
 		let holderHTML = '';
 		let total = 0;
+		let itemCount = 0;
         $.each(shopCart,function(index, value){
 			let subTotal = (value.price * value.qty)
-        	holderHTML +=  `<div> Item: ${value.name}  Qty: ${value.qty}  Price: ${formatMoney(value.price)} Id: ${value.id} </div>  <br>`
+        	holderHTML +=  `<tr> <td> ${value.qty}  </td> <td> ${value.name} </td> <td class="text-xs-right"> ${formatMoney(value.price)}</td> <td class="text-xs-right"> ${formatMoney(subTotal)} </td></tr>  <br>`
         	// console.log('this is the value :', value)
         	total += subTotal
+        	itemCount += parseInt(value.qty)
+        	console.log(itemCount)
 
         	// console.log(subTotal, total)
         })
-        holderHTML += '<div> Total: ' + formatMoney(total) + '</div>'
+        holderHTML += `<tr> <td colspan="2" class="text-xs-right"> Total: <td/> <td class="text-xs-right">${formatMoney(total)}<td/></tr>`
         $('#output').html(holderHTML)
+        $(".total").html(formatMoney(total))
+        $(".items").html(itemCount)
+
         // console.log('holder Array ', holderHTML)
 
         function formatMoney(n){
