@@ -86,15 +86,15 @@ $(document).ready(function(){
 		let itemCount = 0;
         $.each(shopCart,function(index, value){
 			let subTotal = (value.price * value.qty)
-        	holderHTML +=  `<tr><td> ${value.name} </td> <td># ${value.qty}  </td>  <td>: \''  '\'  ${formatMoney(value.price)}</td> <td>: ${value.id} </td></tr></div>  <br>`
+        	holderHTML +=  `<tr> <td> ${value.qty}  </td> <td> ${value.name} </td> <td class="text-xs-right"> ${formatMoney(value.price)}</td> <td class="text-xs-right"> ${formatMoney(subTotal)} </td></tr>  <br>`
         	// console.log('this is the value :', value)
         	total += subTotal
-        	itemCount += value.qty
+        	itemCount += parseInt(value.qty)
         	console.log(itemCount)
 
         	// console.log(subTotal, total)
         })
-        holderHTML += '<div> Total: ' + formatMoney(total) + '</div>'
+        holderHTML += `<tr> <td colspan="2" class="text-xs-right"> Total: <td/> <td class="text-xs-right">${formatMoney(total)}<td/></tr>`
         $('#output').html(holderHTML)
         $(".total").html(formatMoney(total))
         $(".items").html(itemCount)

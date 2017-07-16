@@ -16,6 +16,11 @@ app.use( bodyParser.urlencoded( {
 app.get('/', (req, res) => {
 	res.render('index')
 })
+
+app.get('/checkout', (req, res) => {
+	res.render('checkout')
+})
+
 const port = process.env.PORT || 3003
 app.listen(port, () =>{
 	console.log('server is up and running on port:', port)
