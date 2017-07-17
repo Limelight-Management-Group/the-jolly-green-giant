@@ -24,6 +24,7 @@ font-family: 'Audiowide', cursive;
 
 #checkoutDiv{
 	display: none;
+	padding-bottom: 30px;
 }
 
 .pushLeft{

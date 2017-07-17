@@ -79,7 +79,7 @@ $(document).ready(function(){
 		if(sessionStorage["shopCart"] != null){
 		 shopCart = JSON.parse(sessionStorage["shopCart"].toString())
 		 console.log('this is sessionStorage :', sessionStorage["shopCart"])
-		 $('#checkoutDiv').show()
+		 console.log('this is working!!', $('#checkoutDiv').show())
 		}
 		let holderHTML = '';
 		let total = 0;
