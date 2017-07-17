@@ -11,6 +11,10 @@
 	padding-bottom: 30px;
 }*/
 
+.offset-1{
+	margin-right: 30px;
+	margin-left: 15px;
+}
 #greenDoorHeading{
 	/*font-family: 'Luckiest Guy', cursive;*/
 font-family: 'Audiowide', cursive;
