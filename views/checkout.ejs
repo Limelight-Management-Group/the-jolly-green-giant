@@ -2,8 +2,42 @@
 <html>
 <head>
 	<title>Checkout</title>
+	  <% include ./header/head %>
+
+	      <script src="/js/checkout.js"></script>
+
+
 </head>
 <body>
-<h1>Welcome to the Checkout!</h1>
+  <% include ./header/_nav %>
+
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" class="container-fluid">
+<input type="hidden" name="cmd" value="_cart">
+<input type="hidden" name="upload" value="1">
+<input type="hidden" name="business" value="waynebanks13@gmail.com">
+<!-- <input type="hidden" name="item_name_1" value="Item Name 1">
+<input type="hidden" name="amount_1" value="1.00">
+<input type="hidden" name="shipping_1" value="1.50">
+ -->
+<input type="submit" value="PayPal">
+
+				<table class="table table-hover">
+					<thead class="thead-inverse">
+						<tr>
+							<th>Qty</th>
+							<th>Item Name</th>
+							<th>Cost</th>
+							<th class="text-xs-right">Subtotal</th>
+						</tr>
+					</thead>
+					<tbody id="output">
+					<script>
+						console.log('this is the output', output)
+					</script>
+						
+					</tbody>
+				</table>
+</form>
+
 </body>
 </html>

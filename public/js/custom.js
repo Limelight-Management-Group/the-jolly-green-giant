@@ -1,3 +1,8 @@
+document.addEventListener('click', (event) => {
+	console.log('this is the event target ', event.target)
+})
+
+
 let shopCart = [];
 $(document).ready(function(){
 	if(sessionStorage["shopCart"] != null){
