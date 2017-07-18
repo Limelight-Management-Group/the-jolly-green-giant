@@ -15,9 +15,38 @@
 	margin-right: 30px;
 	margin-left: 15px;
 }
+
+#saleItems{
+	margin-left: 40px;
+	margin-top: 20px;
+}
+
+.liShorten{
+	width: 100px;
+}
+
+.nav-horz{
+   float: right;
+	/*display: block;*/
+	margin-right: -1600px;
+   margin-bottom: 30px;
+   list-style-type: none;
+
+}
+
+.zIndex{
+	  z-index: 100;
+}
+
+ul{
+	   list-style-type: none;
+
+}
 #greenDoorHeading{
 	/*font-family: 'Luckiest Guy', cursive;*/
+	margin-left: 59px;
 font-family: 'Audiowide', cursive;
+margin-bottom: 50px;
 }
 
 #output{
@@ -26,11 +55,22 @@ font-family: 'Audiowide', cursive;
 	padding: 30px 30px 30px 30px;
 }
 
+.left44{
+	margin-left: 44px;
+}
+
 #checkoutDiv{
 	display: none;
 	padding-bottom: 30px;
+	/*margin-left: 59px;*/
 }
 
 .pushLeft{
 	margin-right: -200px;
+}
+.nav-text{
+	font-size: 28px;
+	color: red;
+	margin-left: 25px;
+	margin-top: 75px;
 }

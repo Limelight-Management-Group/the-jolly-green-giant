@@ -2,9 +2,11 @@
 <html>
 <head>
 	<title>Index Page</title>
+  <% include ./header/head %>
+      <script src="/js/custom.js"></script>
+
 </head>
 <body>
-  <% include ./header/head %>
   <% include ./header/_nav %>
 <!-- <div class="container">
 	<div class="row">
@@ -20,12 +22,12 @@
  </div>
 <!-- Content Changes on Each page -->
 <div id="checkoutDiv">
-	<div>Subtotal <span class="total"> </span> <span class="items"></span> item(s) in cart </div> 
-	<div><span class="btn btn-success" data-toggle='modal' data-target="#cart">Open Shopping Cart</span>
-	<a href="/checkout" class="btn btn-primary">Proceed to Checkout</a>
+	<div class="col-md-5 left44">Subtotal <span class="total"> </span> <span class="items"></span> item(s) in cart </div> 
+	<div class="col-md-5"><span class="zIndex btn btn-success" data-toggle='modal' data-target="#cart">Open Shopping Cart</span>
+	<a href="/checkout" class="zIndex btn btn-primary">Proceed to Checkout</a>
 	</div>
 </div>
-<div class="row">
+<div class="row" id="saleItems">
 <div class="card col-md-2 offset-1 ">
 	<div class="card-block">
 	<h3 class="card-title">Moon - Pie</h3>
